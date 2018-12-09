@@ -1,0 +1,47 @@
+{
+  "name": "storybook-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "test": "jest",
+    "jest:integration": "jest -c integration/jest.config.js",
+    "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration"
+  },
+  "author": "terrancewan",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.11",
+    "@storybook/addon-info": "^4.0.12",
+    "@storybook/addon-knobs": "^4.0.12",
+    "@storybook/addon-links": "^4.0.12",
+    "@storybook/addon-notes": "^4.0.12",
+    "@storybook/addon-options": "^4.0.12",
+    "@storybook/addon-storyshots": "^4.0.12",
+    "@storybook/react": "^4.0.11",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-md-import-to-string": "^1.0.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-require-ignore": "^0.1.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "eslint": "^5.10.0",
+    "eslint-config-imweb": "^0.2.11",
+    "expect": "^23.6.0",
+    "jest": "^23.6.0",
+    "lerna": "^3.6.0",
+    "react-test-renderer": "^16.6.3",
+    "storybook-addon-specifications": "^2.1.2"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}

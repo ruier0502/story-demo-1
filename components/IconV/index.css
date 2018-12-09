@@ -1,0 +1,43 @@
+.icon-css-v {
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.icon-css-v::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+  }
+.icon-css-v--left::after {
+  margin-left: 2px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-css-v--right::after {
+  margin-left: -2px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.icon-css-v--top::after {
+  margin-top: 2px;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.icon-css-v--bottom::after {
+  margin-top: -2px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

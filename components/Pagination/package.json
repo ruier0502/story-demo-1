@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ycxu",
+  "repository": {
+    "type": "git",
+    "url": "http://git.code.oa.com/imweb/stone-ui.git"
+  },
+  "license": "ISC",
+  "name": "@tencent/stone-pagination",
+  "description": "分页"
+}
