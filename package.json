@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "storybook": "start-storybook -p 9001 -c .storybook",
-    "test": "jest",
+    "build": "node ./build/build.js",
+    "jest": "jest",
+    "test": "npm-run-all babel jest",
     "jest:integration": "jest -c integration/jest.config.js",
     "test:integration": "start-server-and-test storybook http-get://localhost:9009 jest:integration"
   },
@@ -24,24 +26,52 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
     "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-md-import-to-string": "^1.0.6",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-require-ignore": "^0.1.1",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
+    "chalk": "^2.4.1",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.10.0",
     "eslint-config-imweb": "^0.2.11",
     "expect": "^23.6.0",
+    "jasmine": "^3.3.1",
     "jest": "^23.6.0",
     "lerna": "^3.6.0",
+    "ora": "^3.0.0",
     "react-test-renderer": "^16.6.3",
+    "rimraf": "^2.6.2",
+    "semver": "^5.6.0",
     "storybook-addon-specifications": "^2.1.2"
   },
   "dependencies": {
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/components/index.js",
+      ".*\\.(css|less|scss)$": "<rootDir>/components/index.js"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
+    "setupFiles": [
+      "./.storybook/__conf__/jestMockConfig.js",
+      "./.storybook/__conf__/enzymeConfig.js"
+    ],
+    "automock": false
+  },
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
   }
 }

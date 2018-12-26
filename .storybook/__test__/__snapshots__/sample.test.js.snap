@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hello Earth 1`] = `
+<button>
+  Hello Earth
+</button>
+`;
+
+exports[`Hello World 1`] = `
+<button>
+  Hello World
+</button>
+`;
